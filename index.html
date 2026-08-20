@@ -1,0 +1,769 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>TRYSPACE — Visualize Before You Buy</title>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&amp;family=Playfair+Display:wght@500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="style.css" rel="stylesheet"/>
+</head>
+<body>
+<header class="navbar">
+<a class="logo" href="#">
+      TRYSPACE<span>.</span>
+</a>
+<nav>
+<a href="#home">Home</a>
+<a href="#shop">Shop</a>
+<a href="#tryon">Virtual Try-On</a>
+<a href="#about">About</a>
+</nav>
+<div class="nav-actions">
+<button class="retailer-nav-btn" id="retailerLoginBtn" type="button">Retailer Login</button>
+<button aria-label="Wishlist" class="icon-btn" id="wishlistBtn">♡ <span id="wishlistCount">0</span></button>
+<button class="cart-btn" id="cartBtn">Cart <span id="cartCount">0</span></button>
+</div>
+</header>
+<main>
+<!-- HERO -->
+<section class="hero" id="home">
+<div class="hero-copy">
+<p class="eyebrow">AI-POWERED VIRTUAL SHOPPING</p>
+<h1>See it.<br/><em>Try it.</em><br/>Buy it.</h1>
+<p class="hero-text">
+          Visualize products in your own world before you buy.
+          TRYSPACE helps you make confident choices and reduce
+          unnecessary returns.
+        </p>
+<div class="hero-buttons">
+<a class="btn btn-dark" href="#shop">Start Shopping <span>→</span></a>
+<a class="btn btn-light" href="#tryon">Try Virtual Preview</a>
+</div>
+<div class="stats">
+<div><strong>AI</strong><small>Style intelligence</small></div>
+<div><strong>12+</strong><small>Curated looks</small></div>
+<div><strong>1</strong><small>Easy upload</small></div>
+</div>
+</div>
+<div class="hero-visual">
+<div class="hero-orbit orbit-one"></div>
+<div class="hero-orbit orbit-two"></div>
+<div class="hero-product-card main-look">
+<div class="look-image">
+<img alt="Lemon Glow Dress" src="assets/clothing/lemon_glow.jpg"/>
+<span class="look-badge">✦ AI MATCH</span>
+</div>
+<div class="look-details">
+<div>
+<small>YOUR NEXT LOOK</small>
+<strong>Lemon Glow Dress</strong>
+</div>
+<span class="match-pill">92% match</span>
+</div>
+</div>
+<div class="floating-card top hero-float">
+<span class="float-icon">✦</span>
+<div><b>AI STYLE PICK</b><small>Soft · Elegant · Pastel</small></div>
+</div>
+<div class="floating-card bottom hero-float">
+<span class="float-icon">♡</span>
+<div><b>FEELS LIKE YOU</b><small>Personalized before you buy</small></div>
+</div>
+<div class="mini-product jewellery-mini">
+<img alt="Golden Pearl Layers" src="assets/jewellery/golden_pearl_layers.jpg"/>
+<span>Jewellery</span>
+</div>
+<div class="mini-product furniture-mini">
+<img alt="Petal Glow Lamp" src="assets/furniture/petal_glow_lamp.jpg"/>
+<span>Home</span>
+</div>
+</div>
+</section>
+<!-- SHOP -->
+<section class="section" id="shop">
+<div class="section-heading">
+<div>
+<p class="eyebrow">THE COLLECTION</p>
+<h2>Find something<br/><em>worth trying.</em></h2>
+</div>
+<p>Curated clothing, jewellery and furniture<br/>for your next purchase.</p>
+</div>
+<div class="category-tabs">
+<button class="active" data-filter="all">All</button>
+<button data-filter="clothing">Clothing</button>
+<button data-filter="jewellery">Jewellery</button>
+<button data-filter="furniture">Room &amp; Furniture</button>
+</div>
+<div class="product-grid">
+<!-- CLOTHING -->
+<article class="product-card" data-category="clothing" data-price="₹2,999">
+<div class="product-image">
+<img alt="Lemon Glow Dress" src="assets/clothing/lemon_glow.jpg"/>
+<span class="tag">DRESS</span>
+</div>
+<div class="product-info">
+<div>
+<h3>Lemon Glow Dress</h3>
+<p>Soft • Elegant • Feminine</p>
+</div>
+<button aria-label="Add to wishlist" class="round-arrow" type="button">♡</button>
+</div>
+<div class="product-actions"><span class="price">₹2,999</span><button class="look-btn" type="button">Generate Look</button><button class="cart-add" type="button">Add to cart</button><button class="buy-btn" type="button">Buy now</button></div></article>
+<article class="product-card" data-category="clothing" data-price="₹3,499">
+<div class="product-image">
+<img alt="Rose Blush Palazzo Set" src="assets/clothing/rose_blush.jpg"/>
+<span class="tag">SET</span>
+</div>
+<div class="product-info">
+<div>
+<h3>Rose Blush Palazzo Set</h3>
+<p>Pastel • Occasion • Graceful</p>
+</div>
+<button aria-label="Add to wishlist" class="round-arrow" type="button">♡</button>
+</div>
+<div class="product-actions"><span class="price">₹3,499</span><button class="look-btn" type="button">Generate Look</button><button class="cart-add" type="button">Add to cart</button><button class="buy-btn" type="button">Buy now</button></div></article>
+<article class="product-card" data-category="clothing" data-price="₹1,899">
+<div class="product-image">
+<img alt="Sky Flare Jeans" src="assets/clothing/sky_flare.jpg"/>
+<span class="tag">DENIM</span>
+</div>
+<div class="product-info">
+<div>
+<h3>Sky Flare Jeans</h3>
+<p>Casual • Clean • Modern</p>
+</div>
+<button aria-label="Add to wishlist" class="round-arrow" type="button">♡</button>
+</div>
+<div class="product-actions"><span class="price">₹1,899</span><button class="look-btn" type="button">Generate Look</button><button class="cart-add" type="button">Add to cart</button><button class="buy-btn" type="button">Buy now</button></div></article>
+<article class="product-card" data-category="clothing" data-price="₹3,999">
+<div class="product-image">
+<img alt="Pastel Pink Sharara Set" src="assets/clothing/pastel_pink.jpg"/>
+<span class="tag">ETHNIC</span>
+</div>
+<div class="product-info">
+<div>
+<h3>Pastel Pink Sharara</h3>
+<p>Festive • Soft • Statement</p>
+</div>
+<button aria-label="Add to wishlist" class="round-arrow" type="button">♡</button>
+</div>
+<div class="product-actions"><span class="price">₹3,999</span><button class="look-btn" type="button">Generate Look</button><button class="cart-add" type="button">Add to cart</button><button class="buy-btn" type="button">Buy now</button></div></article>
+<!-- JEWELLERY -->
+<article class="product-card" data-category="jewellery" data-price="₹1,499">
+<div class="product-image">
+<img alt="Golden Pearl Layers" src="assets/jewellery/golden_pearl_layers.jpg"/>
+<span class="tag">JEWELLERY</span>
+</div>
+<div class="product-info">
+<div>
+<h3>Golden Pearl Layers</h3>
+<p>Delicate • Gold • Chic</p>
+</div>
+<button aria-label="Add to wishlist" class="round-arrow" type="button">♡</button>
+</div>
+<div class="product-actions"><span class="price">₹1,499</span><button class="look-btn" type="button">Generate Look</button><button class="cart-add" type="button">Add to cart</button><button class="buy-btn" type="button">Buy now</button></div></article>
+<article class="product-card" data-category="jewellery" data-price="₹1,299">
+<div class="product-image">
+<img alt="Lavender Bloom Earrings" src="assets/jewellery/lavender_bloom.jpg"/>
+<span class="tag">JEWELLERY</span>
+</div>
+<div class="product-info">
+<div>
+<h3>Lavender Bloom</h3>
+<p>Lavender • Pearl • Elegant</p>
+</div>
+<button aria-label="Add to wishlist" class="round-arrow" type="button">♡</button>
+</div>
+<div class="product-actions"><span class="price">₹1,299</span><button class="look-btn" type="button">Generate Look</button><button class="cart-add" type="button">Add to cart</button><button class="buy-btn" type="button">Buy now</button></div></article>
+<article class="product-card" data-category="jewellery" data-price="₹2,199">
+<div class="product-image">
+<img alt="Emerald Kundan" src="assets/jewellery/emerald_kundan.jpg"/>
+<span class="tag">JEWELLERY</span>
+</div>
+<div class="product-info">
+<div>
+<h3>Emerald Kundan</h3>
+<p>Traditional • Green • Festive</p>
+</div>
+<button aria-label="Add to wishlist" class="round-arrow" type="button">♡</button>
+</div>
+<div class="product-actions"><span class="price">₹2,199</span><button class="look-btn" type="button">Generate Look</button><button class="cart-add" type="button">Add to cart</button><button class="buy-btn" type="button">Buy now</button></div></article>
+<article class="product-card" data-category="jewellery" data-price="₹2,499">
+<div class="product-image">
+<img alt="Lilac Kundan" src="assets/jewellery/lilac_kundan.jpg"/>
+<span class="tag">JEWELLERY</span>
+</div>
+<div class="product-info">
+<div>
+<h3>Lilac Kundan</h3>
+<p>Pastel • Pearl • Bridal</p>
+</div>
+<button aria-label="Add to wishlist" class="round-arrow" type="button">♡</button>
+</div>
+<div class="product-actions"><span class="price">₹2,499</span><button class="look-btn" type="button">Generate Look</button><button class="cart-add" type="button">Add to cart</button><button class="buy-btn" type="button">Buy now</button></div></article>
+<!-- FURNITURE -->
+<article class="product-card" data-category="furniture" data-price="₹2,799">
+<div class="product-image">
+<img alt="Petal Glow Lamp" src="assets/furniture/petal_glow_lamp.jpg"/>
+<span class="tag">LIGHTING</span>
+</div>
+<div class="product-info">
+<div>
+<h3>Petal Glow Lamp</h3>
+<p>Warm • Cozy • Minimal</p>
+</div>
+<button aria-label="Add to wishlist" class="round-arrow" type="button">♡</button>
+</div>
+<div class="product-actions"><span class="price">₹2,799</span><button class="look-btn" type="button">View in Space</button><button class="cart-add" type="button">Add to cart</button><button class="buy-btn" type="button">Buy now</button></div></article>
+<article class="product-card" data-category="furniture" data-price="₹4,299">
+<div class="product-image">
+<img alt="Bamboo Curve Table" src="assets/furniture/bamboo_curve_table.jpg"/>
+<span class="tag">TABLE</span>
+</div>
+<div class="product-info">
+<div>
+<h3>Bamboo Curve Table</h3>
+<p>Natural • Warm • Functional</p>
+</div>
+<button aria-label="Add to wishlist" class="round-arrow" type="button">♡</button>
+</div>
+<div class="product-actions"><span class="price">₹4,299</span><button class="look-btn" type="button">View in Space</button><button class="cart-add" type="button">Add to cart</button><button class="buy-btn" type="button">Buy now</button></div></article>
+<article class="product-card" data-category="furniture" data-price="₹5,499">
+<div class="product-image">
+<img alt="Cloud Lounge Bag" src="assets/furniture/cloud_lounge_bag.jpg"/>
+<span class="tag">SEATING</span>
+</div>
+<div class="product-info">
+<div>
+<h3>Cloud Lounge</h3>
+<p>Soft • Relaxed • Cozy</p>
+</div>
+<button aria-label="Add to wishlist" class="round-arrow" type="button">♡</button>
+</div>
+<div class="product-actions"><span class="price">₹5,499</span><button class="look-btn" type="button">View in Space</button><button class="cart-add" type="button">Add to cart</button><button class="buy-btn" type="button">Buy now</button></div></article>
+<article class="product-card" data-category="furniture" data-price="₹6,999">
+<div class="product-image">
+<img alt="Walnut Accent Chair" src="assets/furniture/walnut_accent_chair.jpg"/>
+<span class="tag">CHAIR</span>
+</div>
+<div class="product-info">
+<div>
+<h3>Walnut Accent Chair</h3>
+<p>Warm • Modern • Premium</p>
+</div>
+<button aria-label="Add to wishlist" class="round-arrow" type="button">♡</button>
+</div>
+<div class="product-actions"><span class="price">₹6,999</span><button class="look-btn" type="button">View in Space</button><button class="cart-add" type="button">Add to cart</button><button class="buy-btn" type="button">Buy now</button></div></article>
+</div>
+</section>
+<!-- TRY ON -->
+<section class="tryon section" id="tryon">
+<div class="tryon-heading">
+<p class="eyebrow">VIRTUAL TRY-ON</p>
+<h2>Before you buy,<br/><em>see it on you.</em></h2>
+<p>Upload your photo, choose a product and let TRYSPACE create your preview.</p>
+</div>
+<div class="tryon-flow">
+<div class="flow-card">
+<span>01</span>
+<div class="flow-icon">↑</div>
+<h3>Upload your photo</h3>
+<p>Use a clear front or full-body photo.</p>
+<label class="upload-btn" for="photoInput">
+            Choose photo
+            <input accept="image/*" id="photoInput" type="file"/>
+</label>
+<div class="photo-preview" id="photoPreview"></div>
+</div>
+<div class="flow-line">→</div>
+<div class="flow-card">
+<span>02</span>
+<div class="flow-icon">✦</div>
+<h3>Choose a product</h3>
+<p>Pick any item from the TRYSPACE collection.</p>
+<a class="small-link" href="#shop">Browse collection →</a>
+<div class="selected-product" id="selectedProduct">No product selected yet</div>
+</div>
+<div class="flow-line">→</div>
+<div class="flow-card">
+<span>03</span>
+<div class="flow-icon">◌</div>
+<h3>Visualize &amp; decide</h3>
+<p>AI will generate your personalized preview.</p>
+<button class="generate-btn" id="generateBtn">Generate Preview ✦</button>
+<div class="preview-message" id="previewMessage"></div>
+</div>
+</div>
+</section>
+<!-- ABOUT -->
+<section class="about section" id="about">
+<div>
+<p class="eyebrow">WHY TRYSPACE?</p>
+<h2>Less guessing.<br/><em>More confidence.</em></h2>
+</div>
+<div class="about-text">
+<p>
+          TRYSPACE brings virtual visualization into everyday shopping.
+          Instead of wondering how a dress, jewellery piece or furniture
+          item will look in your context, preview it first.
+        </p>
+<div class="about-points">
+<span>✦ Visualize before buying</span>
+<span>✦ Compare products easily</span>
+<span>✦ Reduce purchase uncertainty</span>
+</div>
+</div>
+</section>
+</main>
+<footer>
+<strong>TRYSPACE<span>.</span></strong>
+<p>Visualize Before You Buy</p>
+<small>© 2026 TRYSPACE. All rights reserved.</small>
+</footer>
+<div class="cart-overlay" id="cartOverlay"><div class="cart-panel"><button class="cart-close" id="cartClose">×</button><p class="eyebrow">YOUR BAG</p><h2>Your cart</h2><div class="cart-items" id="cartItems"><p class="empty-cart">Your cart is empty.</p></div><div class="cart-total"><span>Total</span><strong id="cartTotal">₹0</strong></div><button class="btn btn-dark checkout-btn" id="checkoutBtn">Proceed to Buy →</button></div></div>
+<!-- PRODUCT DETAILS / RETAILER / COMPARISON UI -->
+<div class="product-modal" id="productModal" aria-hidden="true">
+  <div class="product-modal-backdrop" data-close="product"></div>
+  <div class="product-modal-panel">
+    <button class="modal-close" data-close="product">×</button>
+    <div class="modal-product-grid">
+      <div class="modal-product-image"><img id="detailImage" src="" alt="Product preview"></div>
+      <div class="modal-product-copy">
+        <p class="eyebrow" id="detailCategory">PRODUCT</p>
+        <h2 id="detailName">Product name</h2>
+        <div class="detail-rating">★★★★★ <span>4.8 · 126 reviews</span></div>
+        <div class="detail-price" id="detailPrice">₹0</div>
+        <p id="detailDescription">A curated TRYSPACE product with a soft, considered aesthetic.</p>
+        <div class="detail-specs" id="detailSpecs"></div>
+        <div class="retailer-box">
+          <div class="retailer-head"><strong>Choose where to shop</strong><button id="addRetailerBtn" type="button">+ Add retailer</button></div>
+          <select id="retailerSelect"></select>
+          <small>Retailers are demo entries — add your own store links/details.</small>
+        </div>
+        <div class="modal-actions">
+          <button class="btn btn-dark" id="detailCartBtn">Add to cart</button>
+          <button class="btn btn-light" id="detailBuyBtn">Buy now</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="compare-dock generated-compare-dock" id="generatedCompareDock">
+  <div><strong>Compare generated looks</strong><span id="generatedCompareCount">0/3 looks</span></div>
+  <div class="compare-dock-actions"><button id="generatedCompareOpenBtn" type="button">Compare looks</button><button id="generatedCompareClearBtn" type="button">Clear</button></div>
+</div>
+
+<div class="compare-modal" id="generatedCompareModal" aria-hidden="true">
+  <div class="product-modal-backdrop" data-close="generatedCompare"></div>
+  <div class="compare-panel generated-compare-panel">
+    <button class="modal-close" data-close="generatedCompare">×</button>
+    <p class="eyebrow">YOUR GENERATED LOOKS</p>
+    <h2>Compare the looks you tried.</h2>
+    <p class="modal-subtitle">Comparison is based on the looks you actually generated — not a random product-to-product comparison.</p>
+    <div class="comparison-table" id="generatedComparisonTable"></div>
+  </div>
+</div>
+
+<div class="generate-modal" id="generateModal" aria-hidden="true">
+  <div class="product-modal-backdrop" data-close="generate"></div>
+  <div class="generate-panel">
+    <button class="modal-close" data-close="generate">×</button>
+    <div class="generated-head"><div><p class="eyebrow">AI VIRTUAL TRY-ON</p><h2>Your generated look ✦</h2><p id="generatedIntro">See how the selected product fits your chosen photo.</p></div><span class="match-pill">AI API READY</span></div>
+    <div class="generated-look-grid">
+      <div class="generated-preview"><div class="generated-photo"><img id="generatedUserPhoto" src="" alt="Your uploaded photo"></div><div class="generated-product"><img id="generatedProductImage" src="" alt="Selected product"></div><div class="generated-sparkle">✦</div></div>
+      <div class="generated-details">
+        <p class="eyebrow" id="generatedCategory">CLOTHING</p><h3 id="generatedName">Product</h3><div class="detail-price" id="generatedPrice">₹0</div>
+        <p id="generatedDescription"></p><div class="detail-specs" id="generatedSpecs"></div>
+        <div class="generated-retailer"><strong>Available from</strong><div id="generatedRetailers"></div></div>
+        <div class="modal-actions"><button class="btn btn-dark" id="generatedCartBtn">Add to cart</button><button class="btn btn-light" id="generatedBuyBtn">Buy now</button></div>
+        <button class="generated-compare-add" id="addGeneratedCompareBtn" type="button">＋ Add this generated look to comparison</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="retailer-modal" id="retailerModal" aria-hidden="true">
+  <div class="product-modal-backdrop" data-close="retailer"></div>
+  <div class="retailer-panel">
+    <button class="modal-close" data-close="retailer">×</button>
+    <div id="retailerLoginView">
+      <p class="eyebrow">SELL ON TRYSPACE</p><h2>Become a retailer.</h2>
+      <p class="modal-subtitle">Create your shop profile. For this SIH prototype, every new retailer starts as <strong>Pending verification</strong> and can be approved from the demo Admin panel.</p>
+      <label>Shop name<input id="retailerShopName" placeholder="e.g. Noor Studio"></label>
+      <label>Email<input id="retailerEmail" type="email" placeholder="shop@example.com"></label>
+      <label>Password<input id="retailerPassword" type="password" placeholder="••••••••"></label>
+      <button class="btn btn-dark full-btn" id="retailerLoginSubmit" type="button">Submit / Login →</button>
+      <button class="admin-demo-link" id="adminDemoBtn" type="button">Admin login →</button>
+      <small class="demo-note">Prototype flow: submit once → admin approves → retailer logs in → adds products.</small>
+    </div>
+    <div id="retailerPendingView" class="hidden">
+      <p class="eyebrow">VERIFICATION</p><h2>Application submitted.</h2>
+      <div class="status-card pending"><span class="status-dot"></span><div><strong>Pending admin approval</strong><p>Your shop can access the retailer dashboard after the demo admin approves it.</p></div></div>
+      <button class="btn btn-light full-btn" id="pendingAdminBtn" type="button">Open Admin Demo →</button>
+    </div>
+    <div id="retailerDashboard" class="hidden">
+      <div class="retailer-dashboard-head"><div><p class="eyebrow">RETAILER DASHBOARD</p><h2 id="retailerWelcome">Your shop</h2></div><button class="btn btn-light" id="retailerLogout" type="button">Log out</button></div>
+      <div class="retailer-stats"><div><strong id="retailerProductCount">0</strong><small>Products live</small></div><div><strong>APPROVED</strong><small>Retailer status</small></div></div>
+      <form id="addProductForm" class="add-product-form">
+        <h3>Add a product</h3><div class="form-grid">
+          <label>Product name<input id="newProductName" required placeholder="Pastel Organza Dress"></label>
+          <label>Price (₹)<input id="newProductPrice" required type="number" min="1" placeholder="2499"></label>
+          <label>Category<select id="newProductCategory"><option value="clothing">Clothing</option><option value="jewellery">Jewellery</option><option value="furniture">Room & Furniture</option></select></label>
+          <label>Material / finish<input id="newProductMaterial" placeholder="Satin blend"></label>
+          <label>Fit / dimensions<input id="newProductFit" placeholder="Regular fit"></label>
+          <label>Colours<input id="newProductColors" placeholder="Blush · Ivory · Pearl"></label>
+        </div>
+        <label>Description<textarea id="newProductDescription" rows="3" placeholder="Tell shoppers what makes this product special."></textarea></label>
+        <label>Product photo<input id="newProductImage" type="file" accept="image/*" required></label>
+        <button class="btn btn-dark" type="submit">＋ Add product to Shop</button>
+      </form>
+      <div class="retailer-product-list" id="retailerProductList"></div>
+    </div>
+  </div>
+</div>
+
+<div class="admin-modal" id="adminModal" aria-hidden="true">
+  <div class="product-modal-backdrop" data-close="admin"></div>
+  <div class="admin-panel">
+    <button class="modal-close" data-close="admin">×</button>
+
+    <div id="adminLoginView">
+      <p class="eyebrow">TRYSPACE ADMIN</p>
+      <h2>Admin access.</h2>
+      <p class="modal-subtitle">Only the TrySpace administrator can approve retailer applications in this prototype.</p>
+      <label>Admin ID<input id="adminId" autocomplete="username" placeholder="Admin ID"></label>
+      <label>Password<input id="adminPassword" type="password" autocomplete="current-password" placeholder="Password"></label>
+      <button class="btn btn-dark full-btn" id="adminLoginSubmit" type="button">Login as Admin →</button>
+      <small class="demo-note">Prototype credentials are fixed for the SIH demo.</small>
+    </div>
+
+    <div id="adminDashboardView" class="hidden">
+      <div class="retailer-dashboard-head">
+        <div><p class="eyebrow">TRYSPACE ADMIN</p><h2>Verify retailers.</h2></div>
+        <button class="btn btn-light" id="adminLogout" type="button">Log out</button>
+      </div>
+      <p class="modal-subtitle">Review retailer applications and approve or reject them before they can access the seller dashboard.</p>
+      <div id="adminApplications"></div>
+    </div>
+  </div>
+</div>
+
+<div class="space-modal" id="spaceModal" aria-hidden="true">
+  <div class="product-modal-backdrop" data-close="space"></div>
+  <div class="space-panel">
+    <button class="modal-close" data-close="space">×</button>
+    <div class="space-head"><div><p class="eyebrow">ROOM VIEW</p><h2 id="spaceTitle">View in your space</h2></div><span class="ar-chip">✦ AR-READY DEMO</span></div>
+    <div class="space-layout">
+      <div class="room-preview" id="roomPreview">
+        <div class="room-wall"></div><div class="room-floor"></div>
+        <div class="room-object" id="roomObject"><img id="spaceImage" src="" alt="Furniture in room preview"></div>
+        <div class="room-label">Drag / rotate preview</div>
+      </div>
+      <div class="space-controls">
+        <h3>3D furniture view</h3>
+        <p>Explore the item from different angles and preview it against your uploaded room photo.</p>
+        <label>Rotation <input id="rotateRange" type="range" min="-25" max="25" value="0"></label>
+        <label>Scale <input id="scaleRange" type="range" min="80" max="130" value="100"></label>
+        <button class="btn btn-dark" id="roomPhotoBtn">Use my room photo</button>
+        <button class="btn btn-light" id="spaceCartBtn">Add to cart</button>
+        <small id="spaceNote">For a true camera-based AR experience, connect a WebXR / 3D model viewer in the next build.</small>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+  const filterButtons=document.querySelectorAll("[data-filter]"), products=document.querySelectorAll(".product-card");
+  const photoInput=document.getElementById("photoInput"), photoPreview=document.getElementById("photoPreview");
+  const selectedBox=document.getElementById("selectedProduct"), message=document.getElementById("previewMessage");
+  const overlay=document.getElementById("cartOverlay"), itemsBox=document.getElementById("cartItems"), totalBox=document.getElementById("cartTotal");
+  let selectedProduct=null, wishlist=0, cart=[];
+  const money=v=>Number(v.replace(/[^0-9]/g,"")); const fmt=n=>"₹"+n.toLocaleString("en-IN");
+  const goTry=()=>document.getElementById("tryon").scrollIntoView({behavior:"smooth"});
+  filterButtons.forEach(btn=>btn.onclick=()=>{filterButtons.forEach(b=>b.classList.remove("active"));btn.classList.add("active");let f=btn.dataset.filter;products.forEach(c=>c.style.display=(f==="all"||c.dataset.category===f)?"":"none")});
+  function selectProduct(card,scroll=false){products.forEach(c=>c.classList.remove("selected"));card.classList.add("selected");selectedProduct={name:card.querySelector("h3").textContent.trim(),image:card.querySelector("img").src,category:card.dataset.category,price:card.dataset.price};selectedBox.innerHTML=`<strong>${selectedProduct.name}</strong><span>${selectedProduct.price} · ${selectedProduct.category==='furniture'?'Room preview':'Virtual try-on'}</span>`;selectedBox.classList.add("show");if(scroll)goTry();}
+  products.forEach(c=>c.onclick=e=>{if(e.target.closest("button"))return;selectProduct(c)});
+  document.querySelectorAll(".round-arrow").forEach(b=>b.onclick=e=>{e.stopPropagation();b.classList.toggle("saved");wishlist+=b.classList.contains("saved")?1:-1;document.getElementById("wishlistCount").textContent=wishlist;b.textContent=b.classList.contains("saved")?"♥":"♡"});
+  function renderCart(){document.getElementById("cartCount").textContent=cart.reduce((s,i)=>s+i.qty,0);if(!cart.length){itemsBox.innerHTML='<p class="empty-cart">Your cart is empty. Add something you love ✦</p>';totalBox.textContent='₹0';return}itemsBox.innerHTML=cart.map((i,n)=>`<div class="cart-row"><img src="${i.image}"><div><strong>${i.name}</strong><small>${i.price} × ${i.qty}</small></div><button data-remove="${n}">×</button></div>`).join('');totalBox.textContent=fmt(cart.reduce((s,i)=>s+money(i.price)*i.qty,0));itemsBox.querySelectorAll('[data-remove]').forEach(b=>b.onclick=()=>{cart.splice(+b.dataset.remove,1);renderCart()})}
+  function addCart(c){let item={name:c.querySelector("h3").textContent.trim(),image:c.querySelector("img").src,price:c.dataset.price,qty:1};let old=cart.find(i=>i.name===item.name);if(old)old.qty++;else cart.push(item);renderCart();overlay.classList.add("open")}
+  window.tryspaceAddCart=addCart;
+  products.forEach(c=>{c.querySelector('.cart-add').onclick=e=>{e.stopPropagation();addCart(c)};c.querySelector('.buy-btn').onclick=e=>{e.stopPropagation();alert(`TRYSPACE demo checkout\n\n${c.querySelector('h3').textContent.trim()}\n${c.dataset.price}\n\nConnect Razorpay/Stripe here.`)};c.querySelector('.look-btn').onclick=e=>{e.stopPropagation();selectProduct(c,true)}});
+  document.getElementById('cartBtn').onclick=()=>{renderCart();overlay.classList.add('open')};document.getElementById('cartClose').onclick=()=>overlay.classList.remove('open');overlay.onclick=e=>{if(e.target===overlay)overlay.classList.remove('open')};document.getElementById('checkoutBtn').onclick=()=>alert(cart.length?'Demo checkout ready — connect Razorpay/Stripe here.':'Your cart is empty.');
+  photoInput.onchange=()=>{let f=photoInput.files[0];if(!f)return;if(!f.type.startsWith('image/'))return alert('Please choose an image file.');let u=URL.createObjectURL(f);photoPreview.innerHTML=`<img src="${u}" alt="Uploaded photo preview"><span>Photo selected ✓</span>`};
+  document.getElementById('generateBtn').onclick=()=>{if(!photoInput.files.length)message.textContent='Please choose your photo first ✦';else if(!selectedProduct)message.textContent='Choose a product from the collection first ✦';else if(selectedProduct.category==='furniture')message.innerHTML=`<strong>Room look ready ✦</strong><br>${selectedProduct.name} is ready to be visualized in your space.`;else message.innerHTML=`<strong>Look generated ✦</strong><br>${selectedProduct.name} is ready for your virtual try-on.`;message.classList.add('show')};
+});
+</script>
+
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+  const productModal=document.getElementById('productModal');
+  const generateModal=document.getElementById('generateModal');
+  const retailerModal=document.getElementById('retailerModal');
+  const generatedCompareModal=document.getElementById('generatedCompareModal');
+  let activeCard=null, generatedProduct=null;
+  let retailers=JSON.parse(localStorage.getItem('tryspaceRetailers')||'null') || [];
+  let generatedLooks=JSON.parse(localStorage.getItem('tryspaceGeneratedLooks')||'[]');
+  let retailerSession=JSON.parse(localStorage.getItem('tryspaceRetailerSession')||'null');
+  const details={
+    'Lemon Glow Dress':{desc:'A soft lemon-yellow floor-length dress with gathered draping and a clean feminine silhouette.',specs:['Material · Stretch crepe','Fit · Body-skimming','Length · Maxi','Occasion · Evening / party'],colors:'Lemon · Ivory · Sage'},
+    'Rose Blush Palazzo Set':{desc:'A pastel rose embellished palazzo set with a light dupatta for a polished occasion look.',specs:['Material · Satin blend','Fit · Relaxed','Set · Top + palazzo + dupatta','Occasion · Festive'],colors:'Rose · Dusty Pink · Champagne'},
+    'Sky Flare Jeans':{desc:'High-rise wide-leg denim designed for an easy, modern everyday silhouette.',specs:['Material · Cotton denim','Rise · High waist','Fit · Wide leg','Occasion · Casual'],colors:'Sky Blue · Mid Blue · Washed Blue'},
+    'Pastel Pink Sharara':{desc:'A pastel pink sharara set with delicate embellishment and a lightweight dupatta.',specs:['Material · Satin blend','Fit · Regular','Set · Kurta + sharara + dupatta','Occasion · Festive'],colors:'Blush · Rose · Pearl'},
+    'Golden Pearl Layers':{desc:'Layered gold-tone chains finished with freshwater-style pearl details.',specs:['Finish · Gold tone','Stone · Pearl accents','Style · Layered necklace','Occasion · Everyday / party'],colors:'Gold · Pearl'},
+    'Lavender Bloom':{desc:'Lightweight lavender and pearl statement earrings with a soft festive finish.',specs:['Finish · Gold tone','Stone · Lavender beads','Type · Drop earrings','Occasion · Festive'],colors:'Lavender · Pearl · Gold'},
+    'Emerald Kundan':{desc:'Traditional kundan-inspired earrings with green bead drops and a statement silhouette.',specs:['Finish · Gold tone','Stone · Green beads','Type · Chandbali','Occasion · Festive'],colors:'Emerald · Gold · Pearl'},
+    'Lilac Kundan':{desc:'Pastel lilac kundan earrings with pearl detailing for a soft bridal look.',specs:['Finish · Gold tone','Stone · Lilac beads','Type · Statement drop','Occasion · Bridal'],colors:'Lilac · Pearl · Gold'},
+    'Petal Glow Lamp':{desc:'A warm flower-inspired bedside lamp with a wood-toned base for cozy interiors.',specs:['Material · Metal + wood','Height · 42 cm','Light · Warm LED','Room · Bedroom / reading nook'],colors:'Warm White · Walnut'},
+    'Bamboo Curve Table':{desc:'A curved bamboo side table with built-in shelving for books and small decor.',specs:['Material · Bamboo','Height · 68 cm','Storage · 3 levels','Room · Living / reading'],colors:'Natural Bamboo'},
+    'Cloud Lounge':{desc:'An oversized soft lounge seat designed for relaxed reading and cozy corners.',specs:['Material · Bouclé fabric','Width · 92 cm','Seat · Deep lounge','Room · Bedroom / living'],colors:'Ivory · Cream'},
+    'Walnut Accent Chair':{desc:'A sculptural walnut-framed accent chair with plush cream upholstery.',specs:['Material · Walnut + bouclé','Width · 78 cm','Style · Modern classic','Room · Living / study'],colors:'Walnut · Cream'}
+  };
+  const money=v=>Number(String(v).replace(/[^0-9]/g,''));
+  const fmt=n=>'₹'+Number(n).toLocaleString('en-IN');
+  function close(id){const el=document.getElementById(id);if(el){el.classList.remove('open');el.setAttribute('aria-hidden','true')}}
+  function open(id){const el=document.getElementById(id);if(el){el.classList.add('open');el.setAttribute('aria-hidden','false')}}
+  function productDetails(card){
+    const name=card.querySelector('h3').textContent.trim();
+    return details[name] || JSON.parse(card.dataset.details||'{}') || {};
+  }
+  function retailerOptionsFor(card){
+    const own=card.dataset.retailer || 'TRYSPACE Store';
+    const list=[own,...retailers.filter(x=>x!==own)];
+    return [...new Set(list)];
+  }
+  function openDetails(card){
+    activeCard=card; const name=card.querySelector('h3').textContent.trim(); const d=productDetails(card);
+    document.getElementById('detailImage').src=card.querySelector('img').src;
+    document.getElementById('detailName').textContent=name;
+    document.getElementById('detailPrice').textContent=card.dataset.price;
+    document.getElementById('detailCategory').textContent=card.dataset.category.toUpperCase();
+    document.getElementById('detailDescription').textContent=d.desc||'A curated TRYSPACE product.';
+    document.getElementById('detailSpecs').innerHTML=(d.specs||[]).map(x=>`<span>${x}</span>`).join('');
+    const rs=retailerOptionsFor(card); document.getElementById('retailerSelect').innerHTML=rs.map(r=>`<option>${r}</option>`).join('');
+    open('productModal');
+  }
+  function getCardByName(name){return [...document.querySelectorAll('.product-card')].find(c=>c.querySelector('h3').textContent.trim()===name)}
+  function openGenerate(card){
+    const photoInput=document.getElementById('photoInput');
+    if(!photoInput.files.length){document.getElementById('previewMessage').textContent='Please choose your photo first ✦';document.getElementById('previewMessage').classList.add('show');return;}
+    if(card.dataset.category==='furniture'){openSpace(card);return;}
+    activeCard=card; const name=card.querySelector('h3').textContent.trim(); const d=productDetails(card); const photoURL=URL.createObjectURL(photoInput.files[0]);
+    generatedProduct={name,price:card.dataset.price,image:card.querySelector('img').src,category:card.dataset.category,description:d.desc||'',specs:d.specs||[],colors:d.colors||'',retailers:retailerOptionsFor(card),photo:photoURL,card};
+    document.getElementById('generatedUserPhoto').src=photoURL;document.getElementById('generatedProductImage').src=generatedProduct.image;
+    document.getElementById('generatedCategory').textContent=generatedProduct.category.toUpperCase();document.getElementById('generatedName').textContent=name;document.getElementById('generatedPrice').textContent=generatedProduct.price;document.getElementById('generatedDescription').textContent=generatedProduct.description;
+    document.getElementById('generatedSpecs').innerHTML=generatedProduct.specs.map(x=>`<span>${x}</span>`).join('');
+    document.getElementById('generatedRetailers').innerHTML=generatedProduct.retailers.map(r=>`<span class="retailer-chip">${r}</span>`).join('');
+    document.getElementById('generatedIntro').textContent=`Generated preview for ${name}. Compare this generated look with other looks you try.`;
+    open('generateModal');
+  }
+  function generatedCount(){document.getElementById('generatedCompareCount').textContent=`${generatedLooks.length}/3 looks`;document.getElementById('generatedCompareDock').classList.toggle('show',generatedLooks.length>0)}
+  function addGenerated(){
+    if(!generatedProduct)return;
+    if(generatedLooks.some(x=>x.name===generatedProduct.name)){alert('This generated look is already in comparison.');return}
+    if(generatedLooks.length>=3){alert('Compare up to 3 generated looks.');return}
+    generatedLooks.push({name:generatedProduct.name,price:generatedProduct.price,category:generatedProduct.category,colors:generatedProduct.colors,specs:generatedProduct.specs.join('<br>'),retailers:generatedProduct.retailers.join(' · ')});
+    localStorage.setItem('tryspaceGeneratedLooks',JSON.stringify(generatedLooks));generatedCount();document.getElementById('addGeneratedCompareBtn').textContent='✓ Added to generated comparison';
+  }
+  function compareGenerated(){
+    if(!generatedLooks.length){alert('Generate at least one look first.');return}
+    const rows=[['Generated look',...generatedLooks.map(x=>x.name)],['Price',...generatedLooks.map(x=>x.price)],['Category',...generatedLooks.map(x=>x.category)],['Colour palette',...generatedLooks.map(x=>x.colors||'Curated palette')],['Key details',...generatedLooks.map(x=>x.specs||'Details available')],['Retailers',...generatedLooks.map(x=>x.retailers)]];
+    document.getElementById('generatedComparisonTable').innerHTML=rows.map((r,ri)=>`<div class="compare-row ${ri===0?'compare-head':''}">${r.map((cell,ci)=>ci===0?`<strong>${cell}</strong>`:`<div>${cell}</div>`).join('')}</div>`).join('');open('generatedCompareModal');
+  }
+  // Hide old product-level compare controls: comparison is now only generated-look based.
+  document.querySelectorAll('.compare-btn').forEach(b=>b.remove());
+  document.getElementById('compareDock')?.classList.remove('show');
+  document.querySelectorAll('.product-card').forEach(card=>{
+    card.addEventListener('click',e=>{ if(e.target.closest('button') || e.target.closest('a')) return; openDetails(card); });
+    const look=card.querySelector('.look-btn');
+    look.textContent=card.dataset.category==='furniture'?'3D / AR View':'Generate Look';
+    look.onclick=e=>{e.stopPropagation(); if(card.dataset.category==='furniture'){openSpace(card)} else {openGenerate(card)}};
+  });
+  document.getElementById('generatedCompareOpenBtn').onclick=compareGenerated;
+  document.getElementById('generatedCompareClearBtn').onclick=()=>{generatedLooks=[];localStorage.removeItem('tryspaceGeneratedLooks');generatedCount()};
+  document.getElementById('addGeneratedCompareBtn').onclick=addGenerated;
+  document.getElementById('generatedCartBtn').onclick=()=>{if(activeCard)activeCard.querySelector('.cart-add').click();};
+  document.getElementById('generatedBuyBtn').onclick=()=>{if(activeCard)activeCard.querySelector('.buy-btn').click();};
+  document.getElementById('detailCartBtn').onclick=()=>{if(activeCard)activeCard.querySelector('.cart-add').click();};
+  document.getElementById('detailBuyBtn').onclick=()=>{if(activeCard)activeCard.querySelector('.buy-btn').click();};
+  document.getElementById('addRetailerBtn').onclick=()=>{open('retailerModal');};
+  document.querySelectorAll('[data-close="product"]').forEach(x=>x.onclick=()=>close('productModal'));
+  document.querySelectorAll('[data-close="generate"]').forEach(x=>x.onclick=()=>close('generateModal'));
+  document.querySelectorAll('[data-close="generatedCompare"]').forEach(x=>x.onclick=()=>close('generatedCompareModal'));
+  document.querySelectorAll('[data-close="retailer"]').forEach(x=>x.onclick=()=>close('retailerModal'));
+
+  // Furniture space preview from the existing prototype.
+  const spaceModal=document.getElementById('spaceModal');let spaceCard=null;const roomObject=document.getElementById('roomObject');
+  function openSpace(card){spaceCard=card;document.getElementById('spaceTitle').textContent=card.querySelector('h3').textContent.trim();document.getElementById('spaceImage').src=card.querySelector('img').src;document.getElementById('rotateRange').value=0;document.getElementById('scaleRange').value=100;roomObject.style.transform='translate(-50%,-50%) rotateY(0deg) scale(1)';open('spaceModal')}
+  document.getElementById('rotateRange').oninput=e=>{roomObject.style.transform=`translate(-50%,-50%) rotateY(${e.target.value}deg) scale(${document.getElementById('scaleRange').value/100})`};
+  document.getElementById('scaleRange').oninput=e=>{roomObject.style.transform=`translate(-50%,-50%) rotateY(${document.getElementById('rotateRange').value}deg) scale(${e.target.value/100})`};
+  document.getElementById('roomPhotoBtn').onclick=()=>{const input=document.createElement('input');input.type='file';input.accept='image/*';input.onchange=()=>{const f=input.files[0];if(!f)return;const url=URL.createObjectURL(f);document.getElementById('roomPreview').style.backgroundImage=`url('${url}')`;document.getElementById('roomPreview').classList.add('photo-room');document.getElementById('roomPreview').querySelector('.room-wall').style.display='none';document.getElementById('roomPreview').querySelector('.room-floor').style.display='none'};input.click()};
+  document.getElementById('spaceCartBtn').onclick=()=>{if(spaceCard)spaceCard.querySelector('.cart-add').click()};
+  document.querySelectorAll('[data-close="space"]').forEach(x=>x.onclick=()=>close('spaceModal'));
+
+   // SIH retailer flow: apply → admin approval → dashboard → add/delete products.
+   const retailerPendingView=document.getElementById('retailerPendingView');
+
+   function applications(){return JSON.parse(localStorage.getItem('tryspaceRetailerApplications')||'[]')}
+   function saveApplications(arr){localStorage.setItem('tryspaceRetailerApplications',JSON.stringify(arr))}
+
+   function refreshRetailerUI(){
+     const logged=!!retailerSession;
+     document.getElementById('retailerLoginView').classList.toggle('hidden',logged);
+     retailerPendingView.classList.add('hidden');
+     document.getElementById('retailerDashboard').classList.toggle('hidden',!logged);
+     if(logged){document.getElementById('retailerWelcome').textContent=retailerSession.shopName;renderRetailerProducts()}
+   }
+
+   function showPending(){
+     document.getElementById('retailerLoginView').classList.add('hidden');
+     document.getElementById('retailerDashboard').classList.add('hidden');
+     retailerPendingView.classList.remove('hidden');
+   }
+
+   document.getElementById('retailerLoginSubmit').onclick=()=>{
+     const shop=document.getElementById('retailerShopName').value.trim();
+     const email=document.getElementById('retailerEmail').value.trim();
+     const pass=document.getElementById('retailerPassword').value;
+     if(!shop||!email||pass.length<4){alert('Enter shop name, email and a password of at least 4 characters.');return}
+
+     const arr=applications();
+     let app=arr.find(a=>a.email.toLowerCase()===email.toLowerCase());
+
+     if(!app){
+       app={id:'RET-'+Date.now(),shopName:shop,email,password:pass,status:'pending'};
+       arr.push(app);saveApplications(arr);showPending();return;
+     }
+     if(app.password!==pass){alert('Incorrect password for this retailer account.');return}
+     if(app.status!=='approved'){showPending();return}
+
+     retailerSession={id:app.id,shopName:app.shopName,email:app.email};
+     localStorage.setItem('tryspaceRetailerSession',JSON.stringify(retailerSession));
+     if(!retailers.includes(app.shopName)){retailers.push(app.shopName);localStorage.setItem('tryspaceRetailers',JSON.stringify(retailers))}
+     refreshRetailerUI();
+   };
+
+   document.getElementById('retailerLogout').onclick=()=>{
+     retailerSession=null;localStorage.removeItem('tryspaceRetailerSession');refreshRetailerUI();
+   };
+   document.getElementById('retailerLoginBtn').onclick=()=>{refreshRetailerUI();open('retailerModal')};
+
+   // Fixed demo admin credentials for SIH prototype.
+   const DEMO_ADMIN_ID='admin';
+   const DEMO_ADMIN_PASSWORD='tryspace@2026';
+
+   function openAdmin(){
+     const logged=localStorage.getItem('tryspaceAdminSession')==='true';
+     document.getElementById('adminLoginView').classList.toggle('hidden',logged);
+     document.getElementById('adminDashboardView').classList.toggle('hidden',!logged);
+     if(logged) renderAdminApplications();
+     open('adminModal');
+   }
+
+   document.getElementById('adminDemoBtn').onclick=openAdmin;
+   document.getElementById('pendingAdminBtn').onclick=openAdmin;
+
+   document.getElementById('adminLoginSubmit').onclick=()=>{
+     const id=document.getElementById('adminId').value.trim();
+     const password=document.getElementById('adminPassword').value;
+
+     if(id===DEMO_ADMIN_ID && password===DEMO_ADMIN_PASSWORD){
+       localStorage.setItem('tryspaceAdminSession','true');
+       document.getElementById('adminLoginView').classList.add('hidden');
+       document.getElementById('adminDashboardView').classList.remove('hidden');
+       renderAdminApplications();
+     }else{
+       alert('Invalid Admin ID or password.');
+     }
+   };
+
+   document.getElementById('adminLogout').onclick=()=>{
+     localStorage.removeItem('tryspaceAdminSession');
+     document.getElementById('adminDashboardView').classList.add('hidden');
+     document.getElementById('adminLoginView').classList.remove('hidden');
+   };
+
+   function renderAdminApplications(){
+     const arr=applications(),box=document.getElementById('adminApplications');
+     if(!arr.length){box.innerHTML='<div class="admin-empty">No retailer applications yet. Submit one from Retailer Login first.</div>';return}
+     box.innerHTML=arr.map(a=>`<div class="admin-application"><div><p class="admin-shop">${a.shopName}</p><p class="admin-email">${a.email}</p><span class="admin-status ${a.status}">${a.status.toUpperCase()}</span></div><div class="admin-actions">${a.status==='pending'?`<button class="admin-approve" data-approve="${a.id}">✓ Approve</button><button class="admin-reject" data-reject="${a.id}">Reject</button>`:`<span class="approved-note">${a.status==='approved'?'✓ Verified retailer':'Rejected'}</span>`}</div></div>`).join('');
+
+     box.querySelectorAll('[data-approve]').forEach(btn=>btn.onclick=()=>{
+       const apps=applications(),app=apps.find(x=>x.id===btn.dataset.approve);
+       if(app){app.status='approved';saveApplications(apps);renderAdminApplications();alert(`${app.shopName} is approved ✦ They can now log in.`)}
+     });
+     box.querySelectorAll('[data-reject]').forEach(btn=>btn.onclick=()=>{
+       const apps=applications(),app=apps.find(x=>x.id===btn.dataset.reject);
+       if(app){app.status='rejected';saveApplications(apps);renderAdminApplications()}
+     });
+   }
+
+   function userProducts(){return JSON.parse(localStorage.getItem('tryspaceUserProducts')||'[]')}
+   function saveUserProducts(arr){localStorage.setItem('tryspaceUserProducts',JSON.stringify(arr))}
+
+   function createCard(p){
+     const article=document.createElement('article');
+     article.className='product-card retailer-product-card';
+     article.dataset.id=p.id;article.dataset.category=p.category;article.dataset.price=fmt(p.price);article.dataset.retailer=p.retailer;
+     article.dataset.details=JSON.stringify({desc:p.description,specs:[`Material / finish · ${p.material||'Curated'}`,`Fit / dimensions · ${p.fit||'Regular'}`,`Colours · ${p.colors||'Curated palette'}`],colors:p.colors});
+     const label=p.category==='furniture'?'RETAILER · FURNITURE':`RETAILER · ${p.retailer}`;
+     article.innerHTML=`<div class="product-image"><img alt="${p.name}" src="${p.image}"><span class="tag">${label}</span></div><div class="product-info"><div><h3>${p.name}</h3><p>${p.description||'Added by a TRYSPACE retailer.'}</p><div class="retailer-byline">Sold by <strong>${p.retailer}</strong></div></div></div><div class="product-actions"><span class="price">${fmt(p.price)}</span><button class="look-btn" type="button">${p.category==='furniture'?'3D / AR View':'Generate Look'}</button><button class="cart-add" type="button">Add to cart</button><button class="buy-btn" type="button">Buy now</button></div>`;
+     document.querySelector('.product-grid').appendChild(article);wireCard(article);return article;
+   }
+
+   function wireCard(card){
+     card.addEventListener('click',e=>{if(e.target.closest('button')||e.target.closest('a'))return;openDetails(card)});
+     card.querySelector('.look-btn').onclick=e=>{e.stopPropagation();card.dataset.category==='furniture'?openSpace(card):openGenerate(card)};
+     card.querySelector('.cart-add').onclick=e=>{e.stopPropagation();window.tryspaceAddCart?window.tryspaceAddCart(card):alert('Added to cart ✦')};
+     card.querySelector('.buy-btn').onclick=e=>{e.stopPropagation();alert(`TRYSPACE demo checkout\n\n${card.querySelector('h3').textContent}\n${card.dataset.price}\nSeller: ${card.dataset.retailer}\n\nConnect payment gateway in production.`)};
+   }
+
+   function deleteProduct(id){
+     if(!retailerSession)return;
+     const arr=userProducts(),product=arr.find(p=>String(p.id)===String(id));
+     if(!product)return;
+     if(product.retailerId!==retailerSession.id){alert('You can only delete products from your own shop.');return}
+     if(!confirm(`Delete "${product.name}" from your shop?`))return;
+     saveUserProducts(arr.filter(p=>String(p.id)!==String(id)));
+     document.querySelector(`.retailer-product-card[data-id="${id}"]`)?.remove();
+     renderRetailerProducts();
+   }
+
+   function renderRetailerProducts(){
+     if(!retailerSession)return;
+     const arr=userProducts().filter(p=>p.retailerId===retailerSession.id);
+     document.getElementById('retailerProductCount').textContent=arr.length;
+     document.getElementById('retailerProductList').innerHTML=arr.map(p=>`<div class="retailer-mini-row"><img src="${p.image}" alt="${p.name}"><div class="retailer-mini-copy"><strong>${p.name}</strong><small>${fmt(p.price)} · ${p.category}</small></div><button class="delete-product-btn" data-delete-product="${p.id}" type="button">Delete</button></div>`).join('')||'<p class="empty-retailer">No products yet. Add your first product above.</p>';
+     document.querySelectorAll('[data-delete-product]').forEach(btn=>btn.onclick=()=>deleteProduct(btn.dataset.deleteProduct));
+   }
+
+   document.getElementById('addProductForm').onsubmit=async e=>{
+     e.preventDefault();
+     if(!retailerSession){alert('Please log in as an approved retailer first.');return}
+     const file=document.getElementById('newProductImage').files[0];
+     if(!file){alert('Choose a product photo.');return}
+     const image=await new Promise(resolve=>{const r=new FileReader();r.onload=()=>resolve(r.result);r.readAsDataURL(file)});
+     const p={id:Date.now(),retailerId:retailerSession.id,retailer:retailerSession.shopName,name:document.getElementById('newProductName').value.trim(),price:Number(document.getElementById('newProductPrice').value),category:document.getElementById('newProductCategory').value,material:document.getElementById('newProductMaterial').value.trim(),fit:document.getElementById('newProductFit').value.trim(),colors:document.getElementById('newProductColors').value.trim(),description:document.getElementById('newProductDescription').value.trim(),image,status:'live'};
+     const arr=userProducts();arr.push(p);saveUserProducts(arr);createCard(p);document.getElementById('addProductForm').reset();renderRetailerProducts();alert(`${p.name} is now live in TRYSPACE Shop ✦`);
+   };
+
+   document.querySelectorAll('[data-close="admin"]').forEach(x=>x.onclick=()=>close('adminModal'));
+
+  // Existing core script owns cart; expose a fallback for retailer cards by clicking its existing cart behavior when available.
+  const originalGrid=document.querySelector('.product-grid');
+  const existingCartAdd=originalGrid.querySelectorAll('.cart-add');
+  
+  const arr=userProducts();arr.forEach(p=>createCard(p));
+
+  document.querySelectorAll('[data-filter]').forEach(btn=>btn.onclick=()=>{document.querySelectorAll('[data-filter]').forEach(b=>b.classList.remove('active'));btn.classList.add('active');const f=btn.dataset.filter;document.querySelectorAll('.product-card').forEach(c=>c.style.display=(f==='all'||c.dataset.category===f)?'':'none')});
+  ['productModal','generateModal','generatedCompareModal','retailerModal','spaceModal'].forEach(id=>close(id));
+  refreshRetailerUI();generatedCount();
+});
+</script>
+
+</body>
+</html>
